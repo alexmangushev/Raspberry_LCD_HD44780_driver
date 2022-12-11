@@ -46,6 +46,7 @@ To show messages from driver:
 dmesg
 ```
 
-
+### Connection of display:
+![](https://github.com/alexmangushev/Raspberry_LCD_HD44780_driver/blob/master/img/schem.png)
 
 
