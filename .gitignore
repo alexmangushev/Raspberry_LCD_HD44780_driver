@@ -1,0 +1,14 @@
+*.mod
+*.mod.*
+*.o
+*.o.*
+*.ko
+*.ko.*
+*.order
+*.order.*
+*.symvers
+*.symvers.*
+!HD44780_driver.c
+!HD44780_driver.ko
+!README.md
+!Makefile
