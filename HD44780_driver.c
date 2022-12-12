@@ -35,7 +35,7 @@ static uint8_t pins_out_2_size = 7;
 
 
 static struct proc_dir_entry *lll_proc = NULL;
-static char data_buffer[LLL_MAX_USER_SIZE+1] = {0};
+static char data_buffer[MAX_USER_SIZE+1] = {};
 static volatile uint32_t *gpio_registers = NULL;
 
 // Set or clear GPIO pin
@@ -177,7 +177,7 @@ ssize_t driver_read(struct file *file, char __user *user, size_t size, loff_t *o
 
 ssize_t driver_write(struct file *file, const char __user *user, size_t size, loff_t *off)
 {
-	char str[LLL_MAX_USER_SIZE] = {};
+	char str[MAX_USER_SIZE] = {};
 	unsigned int len = 0;
 	
 	memset(data_buffer, 0x00, sizeof(data_buffer));
