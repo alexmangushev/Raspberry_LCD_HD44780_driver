@@ -2,7 +2,23 @@
 
 ## Discripton
 Driver for Raspbery PI 3/4 to dispaly string on LCD screen with
-controller HD44780. It implemented such as file in /proc
+controller HD44780. It implemented such as file in /proc.
+**This code will work with Linux kernel version > 6.1.**
+
+Find out the version number:
+```sh
+uname -a
+```
+
+If you start on PI 4:
+```C
+gpio_registers = (int*)ioremap(BCM2711_GPIO_ADDRESS, PAGE_SIZE);
+```
+
+If you start on PI 3:
+```C
+gpio_registers = (int*)ioremap(BCM2837_GPIO_ADDRESS, PAGE_SIZE);
+```
 
 ## How work with it
 If you want use it, run:
